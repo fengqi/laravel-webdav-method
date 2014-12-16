@@ -10,7 +10,7 @@ Extension for the Laravel 4 router have webdav method.
 # Installation
 Add to app.php 'providers' array:
 ```
-fengqi\LaravelWebdavMethod\WebDavMethodServiceProvider
+'fengqi\LaravelWebdavMethod\WebDavMethodServiceProvider'
 ```
 
 # Useage example
