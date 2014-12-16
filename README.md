@@ -8,7 +8,6 @@ Extension for the Laravel 4 router have webdav method.
 >Nginx WebDav missiing methods support: [nginx-dav-ext-module] (https://github.com/arut/nginx-dav-ext-module)
 
 # Installation
-Add to app.php 'providers' array:
     fengqi\LaravelWebdavMethod\WebDavMethodServiceProvider
 
 # Useage example
