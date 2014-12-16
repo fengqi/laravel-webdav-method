@@ -4,10 +4,11 @@ use Illuminate\Events\Dispatcher;
 use Illuminate\Support\ServiceProvider;
 
 /**
- * #description
+ * Extension for the Laravel 4 router have webdav method
  *
  * @author  fengqi <lyf362345@gmail.com>
- * @version $Id: $
+ * @link    https://github.com/fengqi/laravel-webdav-method
+ * @license   http://www.opensource.org/licenses/mit-license.php MIT
  */
 class WebdavMethodServiceProvider extends ServiceProvider
 {
