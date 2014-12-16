@@ -1,0 +1,24 @@
+
+{
+    "name": "fengqi/laravel-webdav-method",
+    "description": "Extension for the Laravel 4 router have webdav method",
+    "keywords": ["laravel", "router", "webdav"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "fengqi",
+            "email": "lyf362345@gmail.com",
+            "homepage": "https://fengqi.me"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.x",
+        "illuminate/routing": "4.x"
+    },
+    "autoload": {
+        "psr-4": {
+            "fengqi\\LaravelIdeHelper\\": "src"
+        }
+    }
+}
