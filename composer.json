@@ -1,4 +1,3 @@
-
 {
     "name": "fengqi/laravel-webdav-method",
     "description": "Extension for the Laravel 4 router have webdav method",
@@ -18,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "fengqi\\LaravelIdeHelper\\": "src"
+            "fengqi\\LaravelWebdavMethod\\": "src"
         }
     }
 }
