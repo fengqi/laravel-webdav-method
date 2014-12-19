@@ -3,18 +3,18 @@ laravel-webdav-method
 
 Extension for the Laravel 4 router have webdav method.
 
->Full WebDav support in Nginx you need to turn on standard Nginx WebDav module as well as 
->this module for missing methods.
->Nginx WebDav missiing methods support: [nginx-dav-ext-module] (https://github.com/arut/nginx-dav-ext-module)
-
 # Installation
-Add to app.php 'providers' array:
+Require this package with composer:
+```
+composer require fengqi/laravel-webdav-method
+```
+After updating composer, add the ServiceProvider to the providers array in app/config/app.php
 ```
 'fengqi\LaravelWebdavMethod\WebDavMethodServiceProvider'
 ```
 
 # Useage example
-    Route::propfind('/example', 'PropController');
+    Route::propfind('/example', 'PropController@index');
     Route::propfind('/example', function()
     {
         // anything...
