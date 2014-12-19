@@ -1,8 +1,5 @@
 <?php namespace fengqi\LaravelWebdavMethod;
 
-use Closure;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Routing\RouteCollection;
 use Illuminate\Routing\Router as IlluminateRouter;
 
 /**
@@ -31,7 +28,7 @@ class Router extends IlluminateRouter
      */
     public function any($uri, $action)
     {
-        return $this->addRoute(self::$verbs, $uri, $action);
+        return $this->addRoute(array_merge(self::$verbs, self::$extVerbs), $uri, $action);
     }
 
     /**
@@ -115,6 +112,6 @@ class Router extends IlluminateRouter
      */
     public function unlock($uri, $action)
     {
-        return $this->addRoute('ULOCK', $uri, $action);
+        return $this->addRoute('UNLOCK', $uri, $action);
     }
 }

@@ -1,6 +1,5 @@
 <?php namespace fengqi\LaravelWebdavMethod;
 
-use Illuminate\Events\Dispatcher;
 use Illuminate\Support\ServiceProvider;
 
 /**
@@ -12,26 +11,16 @@ use Illuminate\Support\ServiceProvider;
  */
 class WebdavMethodServiceProvider extends ServiceProvider
 {
-    protected $defer = false;
-
-    public function boot()
-    {
-        // todo
-    }
-
     /**
      * Register the service provider.
      *
-     * @return void
+     * @return Router
      */
     public function register()
     {
         $this->app['router'] = $this->app->share(function ($app)
         {
             $router = new Router($app['events'], $app);
-
-            // todo do anything
-
             return $router;
         });
     }
