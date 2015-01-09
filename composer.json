@@ -1,7 +1,7 @@
 {
     "name": "fengqi/laravel-webdav-method",
     "description": "Extension for the Laravel 4 router have webdav method",
-    "keywords": ["laravel", "router", "webdav"],
+    "keywords": ["laravel", "router", "webdav", "carddav"],
     "license": "MIT",
     "authors": [
         {
