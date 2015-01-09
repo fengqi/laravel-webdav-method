@@ -14,13 +14,14 @@ class Router extends IlluminateRouter
     /**
      * Extensions of the verbs supported by the router.
      *
+     *
      * @link http://www.webdav.org/specs/rfc4918.html#http.methods.for.distributed.authoring
      * @var array
      */
-    public static $extVerbs = array('COPY', 'MOVE', 'MKCOL', 'PROPFIND', 'PROPPATCH', 'LOCK', 'UNLOCK');
+    public static $extVerbs = array('COPY', 'MOVE', 'MKCOL', 'PROPFIND', 'PROPPATCH', 'LOCK', 'UNLOCK', 'REPORT');
 
     /**
-     * Register a new route responding to webdav verbs.
+     * Register a new route responding to all verbs.
      *
      * @param string $uri
      * @param array|callable|string $action
@@ -32,7 +33,7 @@ class Router extends IlluminateRouter
     }
 
     /**
-     * Register a new route responding to webdav verbs
+     * Register a new COPY route with the router.
      *
      * @param $uri
      * @param $action
@@ -44,7 +45,7 @@ class Router extends IlluminateRouter
     }
 
     /**
-     * Register a new route responding to webdav verbs
+     * Register a new MOVE route with the router.
      *
      * @param $uri
      * @param $action
@@ -56,7 +57,7 @@ class Router extends IlluminateRouter
     }
 
     /**
-     * Register a new route responding to webdav verbs
+     * Register a new MKCOL route with the router.
      *
      * @param $uri
      * @param $action
@@ -80,7 +81,7 @@ class Router extends IlluminateRouter
     }
 
     /**
-     * Register a new route responding to webdav verbs
+     * Register a new PROPATCH route with the router.
      *
      * @param $uri
      * @param $action
@@ -92,7 +93,7 @@ class Router extends IlluminateRouter
     }
 
     /**
-     * Register a new route responding to webdav verbs
+     * Register a new LOCK route with the router.
      *
      * @param $uri
      * @param $action
@@ -104,7 +105,7 @@ class Router extends IlluminateRouter
     }
 
     /**
-     * Register a new route responding to webdav verbs
+     * Register a new UNLOCK route with the router.
      *
      * @param $uri
      * @param $action
@@ -113,5 +114,17 @@ class Router extends IlluminateRouter
     public function unlock($uri, $action)
     {
         return $this->addRoute('UNLOCK', $uri, $action);
+    }
+
+    /**
+     * Register a new REPORT route with the router.
+     *
+     * @param $uri
+     * @param $action
+     * @return \Illuminate\Routing\Route
+     */
+    public function report($uri, $action)
+    {
+        return $this->addRoute('REPORT', $uri, $action);
     }
 }
